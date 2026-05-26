@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>50% Off Windows | Windows USA — America's Window Replacement Experts</title>
+  <meta name="description" content="Get 50% off replacement windows from Windows USA. 200,000+ happy homeowners, 50+ years in business, 2,000,000+ windows installed. BBB A+ rated. Energy Star certified. Get your free quote today." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:  #0078C1;
+      --blue-dark: #005a94;
+      --red:   #E31B37;
+      --red-dark: #c0152e;
+      --white: #ffffff;
+      --off-white: #f5f7fa;
+      --gray-light: #e8ecf0;
+      --gray: #6b7280;
+      --dark: #1a2332;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── STICKY HEADER ─── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 16px;
+    }
+    .header-logo img { height: 40px; width: auto; display: block; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .header-phone {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .header-phone:hover { color: var(--blue-dark); }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+      white-space: nowrap;
+      letter-spacing: .02em;
+    }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+
+    /* ─── PROMO BANNER ─── */
+    .promo-banner {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .9rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    .promo-banner strong { color: #ffe066; font-size: 1rem; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background: #0d1e30;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/img/hero-flag.avif');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: .45;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(0,20,50,.75) 0%, rgba(0,20,50,.45) 55%, rgba(0,20,50,.2) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-copy { color: white; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .hero-headline {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.3);
+    }
+    .hero-headline span { color: #ffe066; }
+    .hero-subhead {
+      font-size: 1.1rem;
+      opacity: .9;
+      max-width: 520px;
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+    .hero-trust-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-trust-chip {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      color: white;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-trust-chip svg { flex-shrink: 0; }
+
+    /* Quote form card */
+    .quote-card {
+      background: white;
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 16px 48px rgba(0,0,0,.25);
+    }
+    .quote-card-promo {
+      background: var(--red);
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 20px;
+    }
+    .quote-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .quote-card .sub {
+      text-align: center;
+      color: var(--gray);
+      font-size: .85rem;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--gray-light);
+      border-radius: 6px;
+      font-size: .95rem;
+      font-family: var(--font);
+      color: var(--dark);
+      outline: none;
+      transition: border-color .2s;
+      background: white;
+    }
+    .form-group input:focus,
+    .form-group select:focus { border-color: var(--blue); }
+    .form-group input::placeholder { color: #adb5bd; }
+    .btn-form {
+      width: 100%;
+      background: var(--red);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      transition: background .2s, transform .1s;
+      margin-top: 6px;
+    }
+    .btn-form:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .form-disclaimer {
+      text-align: center;
+      font-size: .72rem;
+      color: #9ca3af;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* ─── TRUST STATS ─── */
+    .trust-bar {
+      background: var(--dark);
+      padding: 40px 24px;
+    }
+    .trust-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+    .trust-stat {
+      text-align: center;
+      color: white;
+    }
+    .trust-stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffe066;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .trust-stat-label {
+      font-size: .8rem;
+      opacity: .8;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      line-height: 1.4;
+    }
+    .trust-divider {
+      width: 1px;
+      background: rgba(255,255,255,.15);
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    .section {
+      padding: 72px 24px;
+    }
+    .section-alt { background: var(--off-white); }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-title span { color: var(--red); }
+    .section-sub {
+      color: var(--gray);
+      font-size: 1rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 48px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* ─── BENEFITS ─── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      border-top: 3px solid var(--blue);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(0,120,193,.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .benefit-icon svg { color: var(--blue); }
+    .benefit-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+    .benefit-card p { font-size: .9rem; color: var(--gray); line-height: 1.65; }
+
+    /* ─── OFFER HIGHLIGHT ─── */
+    .offer-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      padding: 64px 24px;
+      text-align: center;
+      color: white;
+    }
+    .offer-pill {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .offer-headline {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+    .offer-headline span { color: #ffe066; }
+    .offer-sub {
+      font-size: 1.15rem;
+      opacity: .9;
+      max-width: 480px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+    .offer-cta { font-size: 1.1rem; padding: 16px 40px; }
+    .offer-fine {
+      font-size: .75rem;
+      opacity: .65;
+      margin-top: 14px;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(16.5% + 16px);
+      right: calc(16.5% + 16px);
+      height: 2px;
+      background: var(--gray-light);
+      z-index: 0;
+    }
+    .step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--blue);
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 16px rgba(0,120,193,.3);
+    }
+    .step h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .step p { font-size: .9rem; color: var(--gray); line-height: 1.65; max-width: 240px; margin: 0 auto; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .stars {
+      color: #f59e0b;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .testimonial-card blockquote {
+      font-size: .92rem;
+      color: var(--dark);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .avatar.red { background: var(--red); }
+    .avatar.teal { background: #0891b2; }
+    .meta-info strong { font-size: .88rem; display: block; }
+    .meta-info span { font-size: .78rem; color: var(--gray); }
+
+    /* ─── CERTIFICATIONS ─── */
+    .cert-strip {
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-light);
+      border-bottom: 1px solid var(--gray-light);
+      padding: 32px 24px;
+    }
+    .cert-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .cert-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: .7rem;
+      letter-spacing: -.02em;
+    }
+    .cert-badge.blue { background: var(--blue); color: white; }
+    .cert-badge.green { background: #059669; color: white; }
+    .cert-badge.gold { background: #d97706; color: white; }
+
+    /* ─── BOTTOM CTA ─── */
+    .bottom-cta {
+      background: var(--dark);
+      padding: 72px 24px;
+      text-align: center;
+      color: white;
+    }
+    .bottom-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .bottom-cta h2 span { color: #ffe066; }
+    .bottom-cta p {
+      color: rgba(255,255,255,.75);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: white;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,.4);
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,.08); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #0d1520;
+      color: rgba(255,255,255,.55);
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer a { color: rgba(255,255,255,.55); text-decoration: none; }
+    footer a:hover { color: white; }
+    .footer-logo { opacity: .75; filter: brightness(0) invert(1); height: 32px; }
+    .footer-links { display: flex; gap: 20px; font-size: .8rem; flex-wrap: wrap; }
+    .footer-copy { font-size: .78rem; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 48px 20px;
+        gap: 32px;
+      }
+      .hero-copy { text-align: center; }
+      .hero-trust-row { justify-content: center; }
+      .hero-subhead { margin-left: auto; margin-right: auto; }
+      .quote-card { max-width: 480px; margin: 0 auto; }
+
+      .trust-bar-inner { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .trust-divider { display: none; }
+
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+      .steps-grid::before { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { height: 60px; }
+      .header-phone { font-size: .95rem; }
+      .btn-primary { padding: 10px 16px; font-size: .85rem; }
+
+      .hero { min-height: auto; }
+      .hero-inner { padding: 40px 16px; }
+
+      .trust-bar-inner { grid-template-columns: repeat(2, 1fr); }
+      .trust-stat-number { font-size: 1.5rem; }
+
+      .section { padding: 48px 16px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+
+      .cert-strip-inner { gap: 20px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    Limited Time: <strong>50% OFF All Windows</strong> — Call Now to Lock In Your Savings!
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-logo" href="#" aria-label="Windows USA">
+        <svg width="151" height="48" viewBox="0 0 151 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M90.56 12.8363L94.9099 12.8392C94.7037 13.8912 94.3412 15.1116 94.0998 16.1965C93.9569 16.5287 93.4149 18.9609 93.2952 19.4363L90.9549 28.8724L86.2946 28.8702C85.7188 25.4601 85.0706 22.0491 84.6581 18.6149C84.6257 18.3419 84.5779 18.0678 84.5279 17.7975C84.2956 19.0147 84.1717 20.2811 83.9437 21.488C83.4798 23.9395 83.0251 26.4305 82.5205 28.8721L77.794 28.8692C77.4801 27.7761 77.1866 26.29 76.9247 25.1525L75.1475 17.4163C74.8145 15.9606 74.4668 14.2608 74.067 12.8359L78.6942 12.8402C79.3312 16.7984 79.9295 20.7629 80.4877 24.7328C80.853 21.6445 81.4956 18.5769 82.0052 15.5092C82.1523 14.6205 82.3121 13.7211 82.4881 12.8378L87.0386 12.8385C87.7453 16.5625 88.2992 20.7238 88.7961 24.4878C89.2375 20.5814 90.0751 16.6722 90.56 12.8363Z" fill="#0078C1"/>
+          <path d="M0 12.8373L4.58633 12.8402C5.30244 16.532 5.82802 20.9629 6.39829 24.7131C6.52161 23.1182 7.00918 20.5939 7.29452 18.9974C7.64962 17.011 7.9765 14.7914 8.38883 12.8375L12.9513 12.838C13.2034 14.7011 13.5658 16.6565 13.862 18.5232C14.1729 20.5176 14.4525 22.5168 14.7005 24.52C15.053 20.7584 15.9816 16.603 16.4728 12.8369L20.8266 12.8387C20.5386 13.8424 20.2551 15.1042 20.014 16.1293C19.9027 16.3846 19.357 18.7746 19.2557 19.1886L17.7463 25.3097C17.4805 26.393 17.1674 27.849 16.8444 28.8719L12.1882 28.8693C11.7698 25.9344 11.105 23.0135 10.7466 20.0675C10.6549 19.3141 10.5778 18.552 10.4309 17.808C10.1763 18.8823 10.0323 20.494 9.81528 21.6697C9.37311 24.0651 8.84817 26.4795 8.43514 28.8715C7.27348 28.8729 4.74526 28.9463 3.66686 28.8483C3.32014 27.1415 2.8603 25.303 2.46804 23.5973L0 12.8373Z" fill="#0078C1"/>
+          <path d="M48.1371 12.7311C52.1837 12.6679 56.5744 13.4166 57.8812 17.9284C58.5113 20.1035 58.2801 22.9849 57.1804 24.9797C56.2866 26.5896 54.799 27.7864 53.0351 28.3147C50.6746 29.2273 46.0917 29.217 43.6366 28.7636L43.6361 13.0425C45.1905 12.8687 46.5595 12.75 48.1371 12.7311ZM47.9296 25.6949C49.924 25.7615 50.3933 25.7455 52.0722 24.7454C52.4288 24.3931 52.8183 24.0009 53.0216 23.5377C54.6108 19.9183 53.4529 15.9827 49.0764 16.0172C48.8761 16.0197 48.6759 16.0261 48.476 16.0366C48.2476 16.0616 48.1108 16.0383 47.9484 16.1588C47.8876 17.208 47.9236 18.5037 47.9246 19.583L47.9296 25.6949Z" fill="#0078C1"/>
+          <path d="M66.2953 12.5863C70.5248 12.2804 73.985 15.376 74.3299 19.5391C74.7719 24.8832 72.3922 28.5481 66.9646 29.122C64.8594 29.1694 62.9399 28.7919 61.3077 27.3623C57.943 24.4155 57.8072 18.44 60.7105 15.1363C62.2021 13.4389 64.0908 12.7221 66.2953 12.5863ZM67.0829 25.7145C68.1324 25.38 68.7053 24.9609 69.2205 23.9637C70.2967 21.8805 70.1686 17.4696 67.7987 16.2781C67.2828 16.0216 66.7 15.9307 66.1306 16.0179C63.3848 16.4835 62.8979 20.0826 63.3038 22.3208C63.7043 24.5307 64.7693 25.8028 67.0829 25.7145Z" fill="#0078C1"/>
+          <path d="M129.887 21.1715C133.81 20.8784 143.26 21.523 146.929 23.0383C145.734 22.8308 143.074 22.6991 141.781 22.6317C135.577 22.3082 128.813 22.3821 122.83 24.1514C120.603 24.81 117.353 26.287 116.256 28.3911C117.499 32.4395 118.862 36.4679 120.137 40.5081C120.463 41.5428 120.831 42.9276 121.26 43.9037C118.813 41.7302 116.191 39.5504 113.698 37.4093C113.475 37.2633 112.186 36.1156 111.91 35.8778C110.532 34.682 109.147 33.496 107.752 32.3202C106.686 32.5504 105.451 33.115 104.454 33.5695C100.145 35.5348 97.1442 38.1792 93.9402 41.5835C95.0629 39.7942 96.0194 38.3968 97.4427 36.7857C103.258 30.2038 111.664 25.2363 120.058 22.7638C123.177 21.845 126.674 21.3835 129.887 21.1715Z" fill="#E31B37"/>
+          <path d="M106.03 0C106.102 0.108705 106.527 1.27261 106.6 1.47073L107.938 5.07273L113.591 20.2162C116.922 19.2888 119.126 18.7239 122.625 18.2719C130.47 17.2826 138.437 18.2246 145.834 21.0157C146.728 21.3553 149.296 22.4247 150.011 22.9764C148.185 22.2552 144.525 21.3867 142.585 21.0231C132.707 19.119 124.098 19.477 114.696 23.0819C112.511 23.92 109.492 25.1025 107.527 26.3686C108.52 23.5739 107.878 21.3252 105.794 19.3102C106.024 18.6389 106.271 17.5961 106.459 16.8869L107.643 12.4628C105.718 11.6768 105.004 11.215 102.779 11.0102C103.036 10.2941 103.325 9.18634 103.545 8.43771L105.109 3.07438C105.395 2.09222 105.698 0.945392 106.03 0Z" fill="#0078C1"/>
+          <path d="M37.924 12.8371L41.8529 12.8375L41.85 24.4392C41.8499 25.0018 41.8913 28.4987 41.8173 28.8315L41.6685 28.8722L37.3384 28.8697C37.1053 28.4359 36.8767 27.9941 36.6573 27.553C34.9831 24.1875 33.121 20.8932 31.775 17.3786C31.9345 18.8588 31.9344 20.4366 31.9521 21.9297C31.9716 24.2429 31.9764 26.5562 31.9663 28.8694L28.0664 28.8708L28.0646 12.8369L33.1096 12.8389C34.2572 15.0628 35.4425 17.2918 36.5529 19.5329C37.2096 20.8585 37.7405 22.3297 38.319 23.6928C37.827 20.7273 37.9242 15.9295 37.924 12.8371Z" fill="#0078C1"/>
+          <path d="M64.0764 31.6533L69.7643 31.6539C70.994 35.397 72.0089 39.4272 73.209 43.2013C73.6553 44.6031 74.0706 46.3577 74.5682 47.6946L69.9424 47.6945C69.6679 46.8955 69.3702 45.6798 69.1386 44.8469L68.9007 43.9754L64.75 43.9742C64.5107 45.1724 64.127 46.4676 63.8596 47.6916C62.3936 47.6747 60.8953 47.6911 59.4267 47.6916L64.0764 31.6533ZM65.3314 40.8142L67.0777 40.8066L68.3094 40.8086C68.156 40.2045 66.8623 34.9269 66.7292 34.7744C66.4773 35.8501 66.2499 36.9335 66.0014 38.0137C65.803 38.8768 65.4855 39.9666 65.3314 40.8142Z" fill="#0078C1"/>
+          <path d="M42.3687 31.6514L46.6554 31.6539L46.6573 35.1195L46.6624 38.8672C46.6634 41.3901 46.6968 44.3785 44.8016 46.1462C41.4261 49.2946 34.17 48.4969 33.297 43.2563C32.9438 41.1364 32.9972 39.6581 32.9978 37.6187L33.0032 31.6536L37.2887 31.6521L37.2852 38.1434C37.2844 40.13 36.7712 44.4502 39.7235 44.5571C42.9076 44.6724 42.3721 40.3213 42.3723 38.1707L42.3687 31.6514Z" fill="#0078C1"/>
+          <path d="M53.5493 31.4428C55.5503 31.2827 56.9491 31.571 58.8078 32.2195C58.5063 33.1056 58.1435 34.6771 57.8847 35.6467C56.6659 35.0836 53.5859 34.3465 52.6087 35.4903C51.3795 36.9604 55.239 37.9628 56.1857 38.3903C58.8529 39.5947 60.2582 41.9748 58.9767 44.8491C57.95 47.1519 55.4829 47.7463 53.1001 47.9451C51.2423 47.989 49.6308 47.7142 47.9117 46.987C48.0605 45.9677 48.4553 44.4577 48.6939 43.4195C49.9767 44.064 51.5173 44.4241 52.9456 44.4311C53.7666 44.4351 55.2773 44.0446 55.0463 42.9689C54.8027 41.8347 52.5302 41.2812 51.586 40.8726C51.0134 40.6292 50.469 40.3242 49.9623 39.9631C47.8342 38.4155 47.3682 35.8335 48.9627 33.6508C50.0641 32.1432 51.7719 31.6895 53.5493 31.4428Z" fill="#0078C1"/>
+          <path d="M101.103 12.5865C102.38 12.4405 104.481 12.9118 105.645 13.4176C105.42 14.4849 105.033 15.7428 104.761 16.8276C103.42 16.2572 100.778 15.524 99.4845 16.6392C98.7954 17.2862 99.5253 18.0406 100.157 18.3568C101.79 19.1753 103.617 19.5119 104.991 20.8115C106.768 22.4927 106.702 25.5731 104.983 27.2719C103.449 28.7883 101.33 29.1129 99.2621 29.1292C97.8388 29.1264 96.0334 28.729 94.7587 28.1294L95.5654 24.573C97.1308 25.4266 99.8829 26.034 101.54 25.1494C103.126 23.2069 99.3859 22.5638 98.2689 21.9623C97.4545 21.5237 97.0322 21.3328 96.3107 20.7158C94.4223 19.1013 94.5082 16.3124 96.0785 14.5167C97.3349 13.1181 99.2424 12.6716 101.103 12.5865Z" fill="#0078C1"/>
+          <path d="M72.0045 33.3838L95.6854 33.3844C95.6235 34.5453 95.4292 35.1411 94.6571 36.0291C93.2796 37.313 91.9732 37.1163 90.2185 37.108L86.7505 37.098L73.1413 37.1027C72.7485 35.866 72.405 34.6184 72.0045 33.3838Z" fill="#E31B37"/>
+          <path d="M9.95282 33.3838L31.3221 33.385L31.3217 37.1066L18.8226 37.1037C16.8825 37.105 14.721 37.2051 12.8148 37.001C11.0434 36.8113 10.0102 35.0232 9.95282 33.3838Z" fill="#E31B37"/>
+          <path d="M21.9963 12.8369L26.2893 12.8387C26.3744 18.0904 26.2999 23.5995 26.2883 28.8692L21.9961 28.869L21.9963 12.8369Z" fill="#0078C1"/>
+          <path d="M73.4153 37.9893C74.0234 38.0207 74.6689 38.0203 75.2777 38.0161C80.853 37.9776 86.4453 38.0805 92.0185 38.0011C92.0114 39.1275 91.7341 39.807 90.9606 40.6216C89.8154 41.5998 89.0109 41.5629 87.5489 41.5569C86.5128 41.5528 85.4521 41.5477 84.4139 41.5465L74.4345 41.5483C74.2029 40.452 73.6236 39.0743 73.4153 37.9893Z" fill="#E31B37"/>
+          <path d="M13.7206 37.9961C15.6265 38.0795 17.9832 38.0189 19.9176 38.0187L31.3212 38.0174C31.3209 39.1953 31.3312 40.3733 31.3523 41.5511L21.4911 41.5531C20.409 41.5531 17.5202 41.6228 16.5533 41.5077C16.0993 41.4549 15.6622 41.3047 15.2717 41.0673C14.4849 40.5905 13.9202 39.8202 13.7023 38.9264C13.628 38.6193 13.5561 38.2679 13.7206 37.9961Z" fill="#E31B37"/>
+          <path d="M17.6178 42.4732L31.4497 42.4717C31.6867 43.6796 31.9183 44.7502 32.5303 45.8358L24.4692 45.832C21.3116 45.8334 18.0834 46.5378 17.6178 42.4732Z" fill="#E31B37"/>
+          <path d="M74.7025 42.4707L88.0323 42.4708C87.9331 43.552 87.7452 44.0158 87.0997 44.8615C86.6901 45.1902 86.1481 45.6036 85.6237 45.6976C84.4532 45.9074 82.9434 45.8341 81.7313 45.8329L75.7506 45.8239C75.3557 44.8515 75.1101 43.515 74.7025 42.4707Z" fill="#E31B37"/>
+        </svg>
+      </a>
+      <div class="header-right">
+        <a class="header-phone" href="tel:+18005551234">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.18 22 2 13.82 2 3.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+          1-800-555-1234
+        </a>
+        <a class="btn-primary" href="#quote">Get Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">Limited Time Offer</div>
+        <h1 class="hero-headline">
+          Save <span>50% Off</span><br>
+          Replacement Windows —<br>
+          All Styles, All Homes
+        </h1>
+        <p class="hero-subhead">
+          America's most trusted window replacement company is offering their biggest sale of the year. Lifetime warranty, professional installation, and zero pressure.
+        </p>
+        <div class="hero-trust-row">
+          <div class="hero-trust-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4z"/></svg>
+            BBB A+ Rated
+          </div>
+          <div class="hero-trust-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21.1 7 14.2 2 9.3l6.9-1L12 2z"/></svg>
+            Energy Star Certified
+          </div>
+          <div class="hero-trust-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+            50+ Years in Business
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote Form -->
+      <div class="quote-card" id="quote">
+        <div class="quote-card-promo">🎉 50% OFF — Limited Time Only</div>
+        <h3>Get Your Free Quote</h3>
+        <p class="sub">No obligation. No pressure. Just savings.</p>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="f-name">Full Name</label>
+            <input id="f-name" type="text" placeholder="John Smith" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number</label>
+            <input id="f-phone" type="tel" placeholder="(555) 123-4567" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="f-zip">Zip Code</label>
+            <input id="f-zip" type="text" placeholder="Enter your zip code" maxlength="10" />
+          </div>
+          <div class="form-group">
+            <label for="f-windows">Number of Windows</label>
+            <select id="f-windows">
+              <option value="">Select number of windows</option>
+              <option>1–3 windows</option>
+              <option>4–6 windows</option>
+              <option>7–10 windows</option>
+              <option>11+ windows</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-form">Claim My 50% Discount →</button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by Windows USA. We respect your privacy and never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Stats Bar -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-stat">
+        <div class="trust-stat-number">200K+</div>
+        <div class="trust-stat-label">Happy Homeowners</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-stat-number">50+</div>
+        <div class="trust-stat-label">Years in Business</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-stat-number">2M+</div>
+        <div class="trust-stat-label">Windows Installed</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-stat-number">A+</div>
+        <div class="trust-stat-label">BBB Rating</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-stat">
+        <div class="trust-stat-number">⭐ 4.9</div>
+        <div class="trust-stat-label">Customer Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header center">
+        <div class="section-eyebrow">Why Choose Windows USA</div>
+        <h2 class="section-title">Quality You Can See. <span>Savings You Can Feel.</span></h2>
+        <p class="section-sub">From energy efficiency to curb appeal, our replacement windows deliver lasting value for your home.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Lifetime Warranty</h4>
+          <p>Every window comes backed by our industry-leading lifetime warranty on materials and workmanship — transferable if you sell your home.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <h4>Energy Star Certified</h4>
+          <p>Our windows can reduce heating and cooling costs by up to 30%. Save money every month while keeping your home comfortable year-round.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+          </div>
+          <h4>No Mess Installation</h4>
+          <p>Our certified installers complete most jobs in a single day with zero mess left behind. We protect your home and leave it cleaner than we found it.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>Noise Reduction</h4>
+          <p>Advanced multi-pane glass dramatically reduces outside noise, giving you a quieter, more peaceful home environment.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>Beautiful Designs</h4>
+          <p>Choose from dozens of styles, colors, and finishes. Our design experts help you find the perfect windows to elevate your home's curb appeal.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>Flexible Financing</h4>
+          <p>Take advantage of 0% interest financing options. Don't let budget be a barrier — get beautiful new windows today and pay over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer Highlight -->
+  <section class="offer-section">
+    <div class="offer-pill">Current Promotion</div>
+    <h2 class="offer-headline">Get <span>50% OFF</span><br>Every Window</h2>
+    <p class="offer-sub">This is our biggest offer of the year. Don't wait — this deal expires soon and won't be repeated.</p>
+    <a href="#quote" class="btn-primary offer-cta">Claim My Free Quote Now</a>
+    <p class="offer-fine">* Offer valid on new installations. Cannot be combined with other offers. Contact us for details.</p>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header center">
+        <div class="section-eyebrow">Simple Process</div>
+        <h2 class="section-title">New Windows in <span>3 Easy Steps</span></h2>
+        <p class="section-sub">From free quote to finished installation, we make the whole process effortless.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Get Your Free Quote</h4>
+          <p>Fill out our quick form or call us. A friendly consultant will walk you through all your options — completely free, no obligation.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Custom Measurement</h4>
+          <p>We schedule a convenient time to measure your windows precisely. Every order is custom-made to fit your home perfectly.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Professional Installation</h4>
+          <p>Our certified crew installs your new windows in a single day. Clean, fast, and worry-free — with a lifetime warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header center">
+        <div class="section-eyebrow">Real Customers. Real Results.</div>
+        <h2 class="section-title">200,000+ Homeowners <span>Trust Windows USA</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The installation crew was professional, fast, and cleaned up everything after. My energy bills dropped noticeably in the first month. I couldn't be happier with the results!"</blockquote>
+          <div class="testimonial-meta">
+            <div class="avatar">MR</div>
+            <div class="meta-info">
+              <strong>Mark R.</strong>
+              <span>Homeowner in Columbus, OH</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"We had 12 windows replaced and the whole job was done in one day. The windows look incredible and the house is so much quieter now. Windows USA exceeded our expectations."</blockquote>
+          <div class="testimonial-meta">
+            <div class="avatar red">SL</div>
+            <div class="meta-info">
+              <strong>Sarah L.</strong>
+              <span>Homeowner in Charlotte, NC</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Got three quotes before going with Windows USA and I'm so glad I did. Best quality, best price, and they actually stood behind their warranty when we had a small issue. 10/10."</blockquote>
+          <div class="testimonial-meta">
+            <div class="avatar teal">DK</div>
+            <div class="meta-info">
+              <strong>David K.</strong>
+              <span>Homeowner in Phoenix, AZ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <div class="cert-strip">
+    <div class="cert-strip-inner">
+      <div class="cert-item">
+        <div class="cert-badge blue">BBB<br>A+</div>
+        <div>
+          <strong>BBB Accredited</strong><br>
+          <span style="font-size:.78rem;color:var(--gray)">A+ Rating</span>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge green">ES</div>
+        <div>
+          <strong>Energy Star Certified</strong><br>
+          <span style="font-size:.78rem;color:var(--gray)">Certified Partner</span>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge gold">50+</div>
+        <div>
+          <strong>50+ Years Experience</strong><br>
+          <span style="font-size:.78rem;color:var(--gray)">Since 1974</span>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge blue">★</div>
+        <div>
+          <strong>4.9 Star Rating</strong><br>
+          <span style="font-size:.78rem;color:var(--gray)">10,000+ Reviews</span>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge" style="background:#4f46e5;color:white;">LW</div>
+        <div>
+          <strong>Lifetime Warranty</strong><br>
+          <span style="font-size:.78rem;color:var(--gray)">Transferable Coverage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <h2>Ready to Save <span>50%?</span></h2>
+    <p>Don't miss this limited-time offer. Get your free, no-obligation quote today and see how much you can save.</p>
+    <div class="cta-buttons">
+      <a href="#quote" class="btn-primary" style="font-size:1.05rem;padding:15px 36px;">Get My Free Quote</a>
+      <a href="tel:+18005551234" class="btn-outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.18 22 2 13.82 2 3.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        1-800-555-1234
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <img
+        class="footer-logo"
+        src="data:image/svg+xml,%3Csvg width='151' height='48' viewBox='0 0 151 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M90.56 12.8363L94.9099 12.8392C94.7037 13.8912 94.3412 15.1116 94.0998 16.1965C93.9569 16.5287 93.4149 18.9609 93.2952 19.4363L90.9549 28.8724L86.2946 28.8702C85.7188 25.4601 85.0706 22.0491 84.6581 18.6149C84.6257 18.3419 84.5779 18.0678 84.5279 17.7975C84.2956 19.0147 84.1717 20.2811 83.9437 21.488C83.4798 23.9395 83.0251 26.4305 82.5205 28.8721L77.794 28.8692C77.4801 27.7761 77.1866 26.29 76.9247 25.1525L75.1475 17.4163C74.8145 15.9606 74.4668 14.2608 74.067 12.8359L78.6942 12.8402C79.3312 16.7984 79.9295 20.7629 80.4877 24.7328C80.853 21.6445 81.4956 18.5769 82.0052 15.5092C82.1523 14.6205 82.3121 13.7211 82.4881 12.8378L87.0386 12.8385C87.7453 16.5625 88.2992 20.7238 88.7961 24.4878C89.2375 20.5814 90.0751 16.6722 90.56 12.8363Z' fill='white'/%3E%3C/svg%3E"
+        alt="Windows USA"
+        width="100"
+        height="32"
+      />
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Windows USA. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
