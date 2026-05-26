@@ -88,6 +88,7 @@
       letter-spacing: .03em;
     }
     .promo-banner strong { color: #ffe066; font-size: 1rem; }
+    @media (max-width: 600px) { .promo-banner { display: none; } }
 
     /* ─── HERO ─── */
     .hero {
@@ -143,7 +144,8 @@
       margin-bottom: 20px;
       text-shadow: 0 2px 12px rgba(0,0,0,.3);
     }
-    .hero-headline span { color: #ffe066; }
+    .hero-headline span { color: white; }
+    .hero-headline .hl-yellow { color: #FFCC00; }
     .hero-subhead {
       font-size: 1.1rem;
       opacity: .9;
@@ -733,9 +735,9 @@
       <div class="hero-copy">
         <div class="hero-badge">Limited Time Offer</div>
         <h1 class="hero-headline">
-          Get <span>50% Off New</span><br>
+          Get 50% Off New<br>
           Replacement Windows —<br>
-          All Styles, All Homes
+          <span class="hl-yellow">All Styles, All Homes</span>
         </h1>
         <p class="hero-subhead">
           America's most trusted window replacement company is offering their biggest sale of the year. Lifetime warranty, professional installation, and zero pressure.
