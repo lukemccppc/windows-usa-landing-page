@@ -318,10 +318,21 @@
       .trust-stat + .trust-stat::before { display: none; }
     }
     @media (max-width: 600px) {
-      .trust-bar-inner { flex-wrap: wrap; justify-content: center; }
-      .trust-stat { flex: 0 0 50%; padding: 18px 16px; }
-      .trust-stat:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.1); }
-      .trust-stat:last-child { flex: 0 0 55%; justify-content: center; border-top: 1px solid rgba(255,255,255,.1); }
+      .trust-bar-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .trust-stat {
+        flex: none;
+        padding: 20px 16px;
+        border-top: 1px solid rgba(255,255,255,.1);
+      }
+      .trust-stat:nth-child(1),
+      .trust-stat:nth-child(2) { border-top: none; }
+      .trust-stat:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+      }
     }
 
     /* ─── SECTION WRAPPER ─── */
