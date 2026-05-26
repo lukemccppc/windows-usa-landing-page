@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>50% Off Windows | Windows USA — America's Window Replacement Experts</title>
   <meta name="description" content="Get 50% off replacement windows from Windows USA. 200,000+ happy homeowners, 50+ years in business, 2,000,000+ windows installed. BBB A+ rated. Energy Star certified. Get your free quote today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -18,7 +21,7 @@
       --gray-light: #e8ecf0;
       --gray: #6b7280;
       --dark: #1a2332;
-      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font: 'DM Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -382,10 +385,27 @@
 
     /* ─── OFFER HIGHLIGHT ─── */
     .offer-section {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
-      padding: 64px 24px;
+      position: relative;
+      padding: 96px 24px;
       text-align: center;
       color: white;
+      overflow: hidden;
+    }
+    .offer-section-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/img/double-hung-hero.avif');
+      background-size: cover;
+      background-position: center;
+    }
+    .offer-section-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,60,110,.88) 0%, rgba(0,40,80,.82) 100%);
+    }
+    .offer-section > *:not(.offer-section-bg):not(.offer-section-overlay) {
+      position: relative;
+      z-index: 2;
     }
     .offer-pill {
       display: inline-block;
@@ -713,7 +733,7 @@
       <div class="hero-copy">
         <div class="hero-badge">Limited Time Offer</div>
         <h1 class="hero-headline">
-          Save <span>50% Off</span><br>
+          Get <span>50% Off New</span><br>
           Replacement Windows —<br>
           All Styles, All Homes
         </h1>
@@ -802,10 +822,10 @@
 
       <div class="trust-stat">
         <div class="trust-stat-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
         </div>
         <div>
-          <div class="trust-stat-number">2,000,000+</div>
+          <div class="trust-stat-number">2M+</div>
           <div class="trust-stat-label">Windows Installed</div>
         </div>
       </div>
@@ -825,7 +845,7 @@
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <div>
-          <div class="trust-stat-number">4.9 / 5</div>
+          <div class="trust-stat-number">4.7 / 5</div>
           <div class="trust-stat-label">Customer Rating</div>
         </div>
       </div>
@@ -890,6 +910,8 @@
 
   <!-- Offer Highlight -->
   <section class="offer-section">
+    <div class="offer-section-bg"></div>
+    <div class="offer-section-overlay"></div>
     <div class="offer-pill">Current Promotion</div>
     <h2 class="offer-headline">Get <span>50% OFF</span><br>Every Window</h2>
     <p class="offer-sub">This is our biggest offer of the year. Don't wait — this deal expires soon and won't be repeated.</p>
